@@ -455,7 +455,7 @@
                 },
                 {
                     title: '5. Encapsulate in Ethernet Frame',
-                    explanation: 'At the Network Access Layer, an Ethernet frame is created. Since the DNS server is on a different network, the frame is addressed to the MAC address of the default gateway (the router).',
+                    explanation: 'At the Network Access Layer, an Ethernet frame is created. Since the DNS server is on a different network, the frame is addressed to the MAC address of the default gateway (the router). If the PC needs to discover the MAC address of the router it will broadcast out an ARP request asking "Who has 192.168.1.1 tell 192.168.1.10". This request will return the MAC address of the router at 192.168.1.1',
                     activeLayer: 'network',
                     data: [
                         { field: 'srcMac', value: networkConfig.pc.mac, source: 'pc' },
